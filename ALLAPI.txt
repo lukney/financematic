@@ -1,0 +1,86 @@
+1)get method - http://ec2-52-23-210-27.compute-1.amazonaws.com:3306/mobile/table1/:cid 
+result - registration.cid, loandetail.loan_id, loan_amount, address, noofinstallement, interest, dayDifference, startdate, receivedamt, fullname, mobile
+
+2)get method - http://ec2-52-23-210-27.compute-1.amazonaws.com:3306/mobile/installid/:loan_id
+result - installement.mydate, installement.installement_id, installement.loan_id, installement.installement_amount
+
+3)get method - http://ec2-52-23-210-27.compute-1.amazonaws.com:3306/mobile/table1/:cid 
+result - installement.mydate, installement.installement_id, loandetail.loan_id, installement.installement_amount
+
+4)post method - http://ec2-52-23-210-27.compute-1.amazonaws.com:3306/mobile/delete/:installement_id 
+result - installement deleted
+
+5)get method - http://ec2-52-23-210-27.compute-1.amazonaws.com:3306/mobile/installementloan/:installement_id
+result - mydate, installement_id,  loandetail.installement_amount
+
+6)post method - http://ec2-52-23-210-27.compute-1.amazonaws.com:3306/mobile/update
+insert -  installement_id,mydate,installement_amount ,loan_id;
+
+result - because of this will get updated installements and deleted installements, transaction table will shown
+
+7)post method - http://ec2-52-23-210-27.compute-1.amazonaws.com:3306/mobile/transaction/
+insert - loan_id
+result - transactionmodel table
+
+8)post method - http://ec2-52-23-210-27.compute-1.amazonaws.com:3306/mobile/loandetailsum/
+insert - loan_id
+result - transactionmodel, updated  loandetail received amount
+
+9)get method - http://ec2-52-23-210-27.compute-1.amazonaws.com:3306/mobile/transactionmodel/
+result - get transactionmodel table
+
+
+10)post method - http://ec2-52-23-210-27.compute-1.amazonaws.com:3306/mobile/updatemy
+insert - installement_id,mydate,installement_amount,loan_id
+result updated installement amount and date
+
+
+11)get method - http://ec2-52-23-210-27.compute-1.amazonaws.com:3306/mobile/registeruser
+result - get last inserted newuser
+
+
+12)get method - http://ec2-52-23-210-27.compute-1.amazonaws.com:3306/mobile/registerusers
+result - get all users
+
+13)get method - http://ec2-52-23-210-27.compute-1.amazonaws.com:3306/mobile/loanuser
+result - get all loandetials
+
+14)get method - http://ec2-52-23-210-27.compute-1.amazonaws.com:3306/mobile/installementloan/:installement_id
+result - mydate, installement_id,  loandetail.installement_amount
+
+15)get method - http://ec2-52-23-210-27.compute-1.amazonaws.com:3306/mobile/newuser
+result - installement table
+
+16)get method - http://ec2-52-23-210-27.compute-1.amazonaws.com:3306/mobile/notification
+result - get notifications if newuser added
+
+
+17)get method - http://ec2-52-23-210-27.compute-1.amazonaws.com:3306/mobile/updatenote
+result - get notifications value become zero
+
+
+18)get method - http://ec2-52-23-210-27.compute-1.amazonaws.com:3306/mobile/expendituressum
+result - get sum of all expeniditure
+
+19)post method - http://ec2-52-23-210-27.compute-1.amazonaws.com:3306/mobile/expend
+insert -  Room_Rent , Light_Bill, Mobile_Bill,Payment,Petrol,date 
+result - insert success
+
+20)get method - http://ec2-52-23-210-27.compute-1.amazonaws.com:3306/mobile/roomrent
+result - get sum Room_Rent,ALL Room_Rent, date
+
+21)get method - http://ec2-52-23-210-27.compute-1.amazonaws.com:3306/mobile/light_bill
+result - get sum light_bill,ALL light_bill,date
+
+22)get method - http://ec2-52-23-210-27.compute-1.amazonaws.com:3306/mobile/mobile_bill
+result - get sum mobile_bill,ALL mobile_bill, date
+
+23)get method - http://ec2-52-23-210-27.compute-1.amazonaws.com:3306/mobile/payment
+result - get sum payment,ALL payment,date
+
+24)get method - http://ec2-52-23-210-27.compute-1.amazonaws.com:3306/mobile/petrol
+result - get sum petrol,ALL petrol, date
+
+25)get method - http://ec2-52-23-210-27.compute-1.amazonaws.com:3306/mobile/others
+result - get sum others,ALL others, date
+
